@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        Computer computer = context.getBean("computer", Computer.class);
 
-        musicPlayer.playMusicList();
+        computer.openAndStarMusic();
 
     }
 }
