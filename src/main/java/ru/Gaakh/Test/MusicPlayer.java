@@ -1,6 +1,7 @@
 package ru.Gaakh.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import ru.Gaakh.Test.genre.Ganre;
@@ -15,8 +16,10 @@ public class MusicPlayer {
     private final static Random random = new Random();
     private List<Music> musicList;
 
+    @Value("${musicPlayer.name}")
     private String name;
 
+    @Value("${musicPlayer.volume}")
     private int volume;
 
     public String getName() {
